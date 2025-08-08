@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>PB Growth Advisors</title>
+  <style>
+    :root {
+      --blue: #003366;
+      --orange: #ff6600;
+      --white: #ffffff;
+      --gray: #f8f9fa;
+    }
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: var(--white);
+      color: #222;
+    }
+    header {
+      background: url('https://upload.wikimedia.org/wikipedia/commons/e/e3/Houston_Skyline.jpg') no-repeat center center / cover;
+      color: var(--white);
+      text-align: center;
+      padding: 4rem 1rem 6rem;
+      position: relative;
+    }
+    header::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0,0,0,0.5);
+    }
+    header h1, header p {
+      position: relative;
+      z-index: 1;
+    }
+    header h1 {
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+    }
+    header p {
+      font-size: 1.1rem;
+      margin-bottom: 1.5rem;
+    }
+    .btn {
+      padding: 0.75rem 1.5rem;
+      border: none;
+      border-radius: 4px;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+    .btn-orange {
+      background: linear-gradient(to right, var(--orange), #ff8c1a);
+      color: white;
+    }
+    .btn-blue {
+      background-color: var(--blue);
+      color: white;
+      margin-left: 1rem;
+    }
+    .container {
+      max-width: 1000px;
+      margin: auto;
+      padding: 2rem 1rem;
+    }
+    .section {
+      margin-bottom: 2rem;
+    }
+    .section h2 {
+      color: var(--blue);
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+    }
+    .what-we-cover {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+    .item {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+    }
+    .item img {
+      width: 32px;
+      height: 32px;
+    }
+    blockquote {
+      background: var(--blue);
+      color: white;
+      padding: 1rem;
+      border-radius: 5px;
+      margin: 1rem 0;
+    }
+    .about {
+      display: flex;
+      gap: 1.5rem;
+      align-items: center;
+    }
+    .about img {
+      width: 100px;
+      border-radius: 50%;
+    }
+    form {
+      background: var(--gray);
+      padding: 1.5rem;
+      border-radius: 8px;
+    }
+    form input, form textarea {
+      width: 100%;
+      padding: 0.75rem;
+      margin-bottom: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    form button {
+      width: 100%;
+    }
+    footer {
+      text-align: center;
+      font-size: 0.9rem;
+      color: #666;
+      background: #f0f0f0;
+      padding: 1rem;
+    }
+    @media (max-width: 768px) {
+      .what-we-cover {
+        grid-template-columns: 1fr;
+      }
+      .about {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Unlock Your Business’s Next Growth Leap</h1>
+    <p>Free 1-hour growth session with PB Growth Advisors — limited availability, apply now</p>
+    <div style="position: relative; z-index: 1;">
+      <a href="#apply" class="btn btn-orange">Apply for Free Session</a>
+      <a href="#about" class="btn btn-blue">Learn More</a>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <section class="section">
+      <h2>What We Cover</h2>
+      <div class="what-we-cover">
+        <div class="item">
+          <img src="https://img.icons8.com/emoji/48/compass-emoji.png" alt="Go-to-market">
+          <div>Go-to-market strategy</div>
+        </div>
+        <div class="item">
+          <img src="https://img.icons8.com/fluency/48/shield.png" alt="Moat">
+          <div>Valuing your moat</div>
+        </div>
+        <div class="item">
+          <img src="https://img.icons8.com/color/48/product.png" alt="Packaging">
+          <div>Packaging & pricing optimization</div>
+        </div>
+        <div class="item">
+          <img src="https://img.icons8.com/color/48/task.png" alt="Resource Allocation">
+          <div>Resource allocation & sales process</div>
+        </div>
+        <div class="item">
+          <img src="https://img.icons8.com/color/48/network.png" alt="Channel">
+          <div>Channel & territory strategy</div>
+        </div>
+        <div class="item">
+          <img src="https://img.icons8.com/color/48/conference-call.png" alt="Sales Org">
+          <div>Sales organization design</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <blockquote>
+        “PB Growth Advisors helped us uncover $350K in missed revenue in a single session.”
+        <br>— Tech founder, Houston
+      </blockquote>
+    </section>
+
+    <section class="section" id="about">
+      <h2>About Us</h2>
+      <div class="about">
+        <img src="https://randomuser.me/api/portraits/women/45.jpg" alt="Partner 1">
+        <img src="https://randomuser.me/api/portraits/men/55.jpg" alt="Partner 2">
+        <p>With over 38 years of combined experience in Fortune 100 strategy and mid-market growth, our founders bring big-league expertise to small business transformation in Houston.</p>
+      </div>
+    </section>
+
+    <section class="section" id="apply">
+      <h2>Apply for Your Free Session</h2>
+      <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+        <input type="text" name="first_name" placeholder="First Name" required>
+        <input type="text" name="last_name" placeholder="Last Name" required>
+        <input type="email" name="email" placeholder="Email" required>
+        <input type="tel" name="phone" placeholder="Phone" required>
+        <input type="text" name="business_name" placeholder="Business Name" required>
+        <input type="text" name="address" placeholder="Business Address" required>
+        <input type="text" name="industry" placeholder="Industry" required>
+        <input type="number" name="employee_count" placeholder="Number of Employees" required>
+        <textarea name="desired_outcome" rows="4" placeholder="What do you want from this session?" required></textarea>
+        <button type="submit" class="btn btn-orange">Submit Application</button>
+      </form>
+    </section>
+
+  </main>
+
+  <footer>
+    PB Growth Advisors © 2025 | Based in Houston, TX
+  </footer>
+
+</body>
+</html>
